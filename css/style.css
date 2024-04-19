@@ -1,0 +1,69 @@
+@font-face {
+    font-family: exo;
+    src: url(../fonts/Exo-VariableFont_wght.ttf);
+}
+:root{
+    font-family: exo;
+    font-size: calc(0.45rem + 1vw);
+    text-align: left;
+    --hidden-element: 0;
+}
+body {
+    display: flex;
+    margin: 0;
+    min-width: 100vw;
+    min-height: 100vh;
+}
+
+body > div {
+    background-color: black;
+    flex-grow: 2;
+}
+p {
+    font-size: 0.7rem;
+    margin: 0.5rem 4rem 0;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    border: 2px black solid;
+    flex-grow: 1;
+    align-self: center;
+    justify-content: center;
+}
+
+.required{
+    vertical-align: top;
+    color: rgb(255, 31, 31);
+    font-size: 0.8rem;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    align-self: center;
+    margin: 0;
+}
+
+li {
+    display: flex;
+    gap: 2rem;
+}
+
+input{
+    border: 1px solid rgba(0, 0, 0, 0.346);
+    border-radius: 5px;
+    font-size: 0.75rem;
+    width: 10rem;
+    height: 1rem;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+label:hover{
+    cursor: pointer;
+}
