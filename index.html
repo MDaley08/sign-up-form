@@ -10,8 +10,8 @@
         <img src="" alt="">
         <div>temp</div>
         <main>
+            <p><span class="required">*</span> indicates required fields</p>
             <form>
-                <p><span class="required">*</span> indicates required fields</p>
                 <ul>
                     <li>
                         <div class="input-container">
@@ -26,11 +26,11 @@
                     <li>
                         <div class="input-container">
                             <label for="email"><span class="required">*</span> Email</label>
-                            <input type="email" name="email" id="email" required>
+                            <input type="email" name="email" id="email" placeholder="myemail@email.com">
                         </div>
                         <div class="input-container">
                             <label for="phone"><span class="required">*</span> Phone Number</label>
-                            <input type="tel" name="phone" id="phone" required>
+                            <input type="tel" name="phone" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" required>
                         </div>
                     </li>
                     <li>
