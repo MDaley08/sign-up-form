@@ -2,48 +2,83 @@
     font-family: exo;
     src: url(../fonts/Exo-VariableFont_wght.ttf);
 }
+
 :root{
     font-family: exo;
     font-size: calc(0.45rem + 1vw);
     color: var(--font-clr);
-    font-weight: 300;
+    font-weight: 400;
     text-align: left;
-    --primary-clr: #4f61d8;
-    --accent-clr: #fffffa;
+    --primary-clr: #b84541;
+    --font-clr: rgb(157, 185, 197);
+    --background-clr: rgb(34, 63, 77);
 }
+
 body {
     display: flex;
+    background-color: var(--background-clr) ;
     margin: 0;
     min-width: 100vw;
     min-height: 100vh;
 }
 
-a {
+#image-container{
+    display: flex;
+    flex-direction: column;
+    vertical-align: bottom;
+    object-fit: cover;
+    min-height: 100vh;
+    min-width: 20vw;
+    width: 42vw;
+    background-image: url(../images/night\ of\ red.jpg);
+    background-size: cover;
+    background-position: 70%;
+}
+
+#image-container p {
+    font-size: 0.8rem;
     font-weight: 500;
+    align-self: center;
+    margin-top: auto;
+}
+#image-container a {
+    color: var(--font-clr);
 }
 
-a:hover {
-    cursor: pointer;
+#logo {
+    display: flex;
+    color: var(--primary-clr);
+    opacity: 0.7;
+    justify-content: center;
+    margin-top: 8vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    box-shadow: -5px 0px 10px 2px rgba(0, 0, 0, 0.4);
+    padding: 20px;
 }
 
-body > div {
-    background-color: var(--primary-clr);
-    flex-grow: 2;
+#logo p {
+    font-size: 1.7rem;
+    font-weight: 600;
+    margin: 0;
 }
 
-main p {
-    font-size: 0.7rem;
-    margin-left: 0.8rem;
-}
 
 main {
     display: flex;
     flex-direction: column;
     align-self: center;
-    border-radius: 5px;
-    box-shadow: 3px 0px 12px rgba(0, 0, 0, 0.5);
+    box-shadow: 3px 0px 15px rgba(0, 0, 0, 0.737);
     flex-grow: 1;
 }
+main a {
+    color: var(--primary-clr);
+    font-weight: 700;
+}
+main p {
+    font-size: 0.7rem;
+    margin-left: 0.8rem;
+}
+
 form {
     display: flex;
     flex-direction: column;
@@ -60,6 +95,46 @@ form {
     font-size: 0.8rem;
 }
 
+.input-container {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+input{
+    color: var(--background-clr);
+    border: 1px solid var(--primary-clr);
+    background-color: #ffffff;
+    opacity: 0.5;
+    border-radius: 5px;
+    font-size: 0.75rem;
+    padding-left: 0.2rem;
+    box-sizing: border-box;
+    width: 10rem;
+    height: 1.35rem;
+}
+
+input:focus {
+    outline: solid var(--primary-clr);
+    outline-width: 3px;
+    opacity: 0.8;
+}
+input:invalid {
+    color: var(--font-clr);
+    background-color: #b8454197;
+}
+
+input:valid {
+    background-color: rgba(114, 254, 114, 0.775);
+}
+::placeholder{
+    color: var(--font-clr);
+}
+
+a:hover {
+    cursor: pointer;
+}
+
 ul {
     list-style: none;
     padding: 0;
@@ -72,38 +147,18 @@ li {
     gap: 2rem;
 }
 
-input{
-    border: 1px solid var(--primary-clr);
-    opacity: 0.5;
-    border-radius: 5px;
-    font-size: 0.75rem;
-    padding-left: 0.2rem;
-    box-sizing: border-box;
-    width: 10rem;
-    height: 1.2rem;
-}
-
-input:focus {
-    outline: double var(--primary-clr);
-}
-
-.input-container {
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-}
-
 label:hover{
     cursor: pointer;
 }
 
 button{
-    color: var(--accent-clr);
+    color: var(--background-clr);
     background-color: var(--primary-clr);
     border-radius: 7px;
     border-style: none;
     text-align: center;
     font-size: 0.8rem;
+    font-weight: 600;
     display: inline-block;
     width: fit-content;
     padding: 12px;
